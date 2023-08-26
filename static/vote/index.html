@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AdamBot | Support</title>
+  <meta content="AdamBot | Vote" property="og:title">
+  <meta name="theme-color" content="#86DB98">
+  <meta content="Introducing AdamBot, your go-to utility, event, and fun bot for Discord! " property="og:description">
+  <meta content="AdamBot" property="og:site_name">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .logo {
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .countdown {
+      font-size: 24px;
+      font-weight: bold;
+      color: #86DB98;
+      animation: scaleUp 1s ease-out;
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .button-container {
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .button {
+      background-color: #86DB98;
+      border: none;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #69B281;
+    }
+  </style>
+  <script>
+    let countdownSeconds = 3;
+    let countdownInterval;
+
+    function startCountdown() {
+      countdownInterval = setInterval(updateCountdown, 1000);
+    }
+
+    function updateCountdown() {
+      const countdownElement = document.getElementById("countdown");
+      countdownElement.textContent = `You will be redirected in ${countdownSeconds} seconds`;
+
+      if (countdownSeconds === 0) {
+        clearInterval(countdownInterval);
+        redirectToDiscord();
+      } else {
+        countdownSeconds--;
+      }
+    }
+
+    function skipCountdown() {
+      clearInterval(countdownInterval);
+      redirectToDiscord();
+    }
+
+    function redirectToDiscord() {
+      window.location.href = "https://top.gg/bot/1143649930951544884/vote";
+    }
+
+    setTimeout(startCountdown, 1000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="https://cdn.discordapp.com/avatars/936438932864921661/6ddd2b34d4ea30600361a06d71132f56.webp?size=512" alt="Logo" width="150" height="150">
+    <p class="countdown" id="countdown">You will be redirected in 3 seconds</p>
+    <div class="button-container">
+      <button class="button" onclick="skipCountdown()">Redirect Now</button>
+    </div>
+  </div>
+</body>
+</html>
