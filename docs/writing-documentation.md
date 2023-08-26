@@ -19,7 +19,7 @@ export const Highlight = ({children, color}) => (
 # **What do I need in order to write documentation?
  - Writing documentation is actually really <Highlight color="#0057B7">easy</Highlight>! All you need is a basic understanding of <Highlight color="#0057B7">MarkDown</Highlight>!
 
-   In this tutorial, we are going to teach you EVERYTHING you need in order to write documentation for AdamBot!
+   In this tutorial, we are going to teach you <Highlight color="#0057B7">EVERYTHING</Highlight> you need in order to write documentation for AdamBot!
 
 # **Instructions For Writing Good Docs:**
  - Remove the instructions before submission
