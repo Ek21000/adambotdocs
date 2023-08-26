@@ -54,7 +54,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          editUrl: 'https://github.com/adambotfd/adambotdocs/edit/master/website',
+          editUrl: 'https://github.com/adambotfd/adambotdocs/edit/master',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
